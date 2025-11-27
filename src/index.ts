@@ -38,7 +38,10 @@ async function getProviderEndpointURLForURL(
           new RegExp(scheme.replace(/\*/g, '(.*)')).test(url),
         )
       ) {
-        return {provider, endpoint: endpoint.url}
+        return {
+          provider,
+          endpoint: endpoint.url
+        };
       }
     }
   }
