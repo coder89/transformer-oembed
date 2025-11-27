@@ -40,7 +40,7 @@ async function getProviderEndpointURLForURL(
       ) {
         return {
           provider,
-          endpoint: endpoint.url
+          endpoint: endpoint.url.replaceAll(/{format}/g, 'json')
         };
       }
     }
